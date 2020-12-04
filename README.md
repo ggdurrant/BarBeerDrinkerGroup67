@@ -1,69 +1,18 @@
-# BarBeerDrinker Demo Project
+# BarBeerDrinker
 
-This project is structured so that there are two folders - one for UI development using Angular and the other for the server-side application using Flask.
+A web application built with Python, Flask, and Angular. The relational database created and queried with MySQL. Shows bars, beers, drinkers, and their transactions in NJ and the tri-state area, with abilitiy to view queries such as the most popular beers in a bar, or the most frequented time of day. 
 
-## Running a development version of the UI
+Several tens of thousands of transactions were created with transaction ID, date, time, bar, drinker, price, tip, list of items bought. These can be viewed in the aggregate or interacted with to find the most common bars, beers, and drinkers for each category, as well as time of day, months, quantity, and total costs of these cumulative transactions. Drinkers have a list of likes as well, so that they only like specific bars and beers.  
 
-To run the UI, go to the bar-beer-drinker-ui folder and first make sure you have the dependencies installed.
-To do this, you need to have Node.js and NPM (comes with Node.js) installed and then execute:
+The data was first generated, with hundreds of thousands of transactions, and then only transactions which meet the following patterns were selected:
+ - drinkers only frequent bars they like
+ - drinkers only purchase beers they like
+ - drinkers only frequent bars in the same state as them
+ - transactions can only be issued during a bar's open hours
+ - beers can vary in price from bar to bar, but remain consistently more or less expensive than their fellow beers
+     * if Stella Artois is $5 in one bar, and Bud Light is $3 in that bar, Stella must cost more than $6 in a bar where Bud Light is $6
+     
+The ER Diagram:
 
-```
-npm install
-```
 
-This will get all the dependencies based on the package.json file.
-
-Afterwards, you will also need to have Angular CLI installed on a global level.
-
-```
-npm install -g @angular/cli
-```
-
-To run the UI code, use:
-
-```
-ng serve
-```
-
-To build a final distribution package of the UI code:
-
-```
-ng build
-```
-
-This will create a `dist` folder containing all the files that need to be included into your server-side application folder under the static folder (go to Flask documentation for further details on this).
-
-## Running the Flask application locally
-
-To run the Flask application locally, make sure you first have the virtual environment setup.
-
-Install `virtualenv`
-```
-pip install virtualenv
-```
-
-Activate the virtual environment
-```
-./venv/Scripts/activate.bat
-```
-
-or
-
-```
-./venv/bin/activate
-```
-
-### Installing Python project dependencies
-
-Make sure you have the virtual environment activated - there should be `(venv)` next to the bash prompt in the terminal.
-
-```
-pip install -r requirements.txt
-```
-
-### Running the application in development
-
-To run the application
-```
-python app.py
-```
+And examples of web app's pages, and the queries that can be automatically viewed: 
