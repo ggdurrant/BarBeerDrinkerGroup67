@@ -10,9 +10,20 @@ The data was first generated, with hundreds of thousands of transactions, and th
  - drinkers only frequent bars in the same state as them
  - transactions can only be issued during a bar's open hours
  - beers can vary in price from bar to bar, but remain consistently more or less expensive than their fellow beers
-     * if Stella Artois is $5 in one bar, and Bud Light is $3 in that bar, Stella must cost more than $6 in a bar where Bud Light is $6
-     
-The ER Diagram:
-
+     * if Stella Artois is $5 and Bud Light is $3 in one bar, Stella must cost more than $6 in a bar where Bud Light is $6
 
 And examples of web app's pages, and the queries that can be automatically viewed: 
+
+![Home](https://github.com/ggdurrant/BarBeerDrinkerGroup67/blob/master/images/homePage.JPG)
+
+![Bar1](https://github.com/ggdurrant/BarBeerDrinkerGroup67/blob/master/images/bar1.JPG)
+
+![Bar2](https://github.com/ggdurrant/BarBeerDrinkerGroup67/blob/master/images/bar2.JPG)
+
+![BeerHome](https://github.com/ggdurrant/BarBeerDrinkerGroup67/blob/master/images/beerHome.JPG)
+
+![Beer1](https://github.com/ggdurrant/BarBeerDrinkerGroup67/blob/master/images/beer1.JPG)
+
+![Drinker1](https://github.com/ggdurrant/BarBeerDrinkerGroup67/blob/master/images/drinker1.JPG)
+
+![Drinker2](https://github.com/ggdurrant/BarBeerDrinkerGroup67/blob/master/images/drinker2.JPG)
